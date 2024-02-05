@@ -14,7 +14,7 @@ FROM build AS publish
 RUN dotnet publish BaGetter -c Release -o /app
 
 FROM base AS final
-LABEL org.opencontainers.image.source="https://github.com/bagetter/BaGetter"
+LABEL org.opencontainers.image.source="https://github.com/adamcaskey/BaGetter"
 WORKDIR /app
 COPY --from=publish /app .
 
